@@ -1,0 +1,4 @@
+# Build output and media are published as GitHub Release assets, not committed.
+Gili.exe
+*.pdb
+video/
