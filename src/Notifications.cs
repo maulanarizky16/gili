@@ -501,7 +501,7 @@ namespace Gili
                 return;
             }
 
-            bool quiet = Native.DoNotDisturb();
+            bool quiet = !demoActive && Native.DoNotDisturb(); // the demo shows toasts, so it must not claim quiet mode
             if (notifs.Count == 0)
             {
                 paint.Icon(quiet ? Theme.IconBellOff : Theme.IconBell, 24, Theme.Faint, w / 2, 96);

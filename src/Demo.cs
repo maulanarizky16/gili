@@ -11,7 +11,7 @@ namespace Gili
         List<KeyValuePair<int, Action>> demoSteps;
         int demoIndex;
         MediaInfo demoSavedMedia;
-        bool demoStartedTimer, demoActive, demoEyes;
+        bool demoStartedTimer, demoActive, demoEyes, videoRecording;
 
         /// <summary>Pretends something is playing (keeping the real artwork) so the music views can be shown.</summary>
         void DemoMedia()

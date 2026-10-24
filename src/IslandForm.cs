@@ -815,6 +815,7 @@ namespace Gili
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
+            if (videoRecording) return; // a stray cursor must not open or close panels mid-take
             mouseDip = new PointF(e.X / scale, e.Y / scale);
             if (TryDragOut(mouseDip)) return;
             bool inside = InShape(mouseDip);
@@ -827,6 +828,7 @@ namespace Gili
         protected override void OnMouseLeave(EventArgs e)
         {
             base.OnMouseLeave(e);
+            if (videoRecording) return;
             if (pointerInside) PointerLeave();
         }
 
